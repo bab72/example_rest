@@ -45,6 +45,6 @@ app.get('/', (req, res) => {
 import { HOST, PORT } from './config'
 
 // start server to listen for requests
-app.listen(PORT, HOST, () => {
-    console.log(`Server is listening on port http://${HOST}:${PORT}`);
+app.listen(PORT, HOST, function() {
+    console.log(`Server is listening on port http://${this.address().address}:${this.address().port}`);
 })
