@@ -42,9 +42,9 @@ app.get('/', (req, res) => {
 
 
 // get important variables that change frequently
-import { HOST, PORT } from './config'
+import { PORT } from './config'
 
 // start server to listen for requests
-app.listen(PORT, HOST, function() {
+app.listen(PORT, function() {
     console.log(`Server is listening on port http://${this.address().address}:${this.address().port}`);
 })
